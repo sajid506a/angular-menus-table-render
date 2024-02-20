@@ -9,10 +9,12 @@ export class DynamicMenuComponent {
   @Input()
   menuItems: any[] = [];
   @Output() menuItemClicked = new EventEmitter<any>();
+  selectedItem: any;
 
   constructor() { }
 
   onItemClick(menuItem: any) {
+    this.selectedItem = menuItem;
     this.menuItemClicked.emit(menuItem);
   }
 }

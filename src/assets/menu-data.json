@@ -1,8 +1,8 @@
 {
     "menuItems": [
-      { "label": "Table 1", "dataKey": "tableData1" },
-      { "label": "Table 2", "dataKey": "tableData2" },
-      { "label": "Table 3", "dataKey": "tableData3" }
+      { "label": "Menu 1", "dataKey": "tableData1" },
+      { "label": "Menu 2", "dataKey": "tableData2" },
+      { "label": "Menu 3", "dataKey": "tableData3" }
     ],
     "tableData1": [
       { "id": 1, "name": "John", "age": 30 },

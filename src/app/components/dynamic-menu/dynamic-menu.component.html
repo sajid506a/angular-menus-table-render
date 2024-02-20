@@ -1,6 +1,8 @@
-<!-- dynamic-menu.component.html -->
-<ul>
-  <li *ngFor="let menuItem of menuItems" (click)="onItemClick(menuItem)">
-    {{ menuItem.label }}
-  </li>
-</ul>
+<div class="menu-list">
+  <mat-nav-list>
+    <mat-list-item *ngFor="let menuItem of menuItems" (click)="onItemClick(menuItem)" [class.selected]="selectedItem === menuItem">
+      <mat-icon matListIcon>list</mat-icon>
+      <h3 matLine>{{ menuItem.label }}</h3>
+    </mat-list-item>
+  </mat-nav-list>
+</div>

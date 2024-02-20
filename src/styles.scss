@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* styles.scss */
+.mat-list-item {
+    background-color: #f0f0f0;
+  }
+  
+  .mat-icon {
+    color: #007bff; /* Blue color for the icon */
+  }
+  
+  .mat-card {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .mat-header-cell, .mat-cell {
+    font-weight: bold;
+  }
+  

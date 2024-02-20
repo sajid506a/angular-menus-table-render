@@ -9,16 +9,4 @@ export class TableComponent {
   @Input() config: any;
 
   constructor() { }
-
-  ngOnInit() {
-    console.log('ngOnInit',this.config);
-  }
-
-  // ngOnChanges(config: any) {
-  //   if (config) {
-  //     const co = config.config.currentValue; 
-
-  //     this.config = {...co}; 
-  //   }
-  // }
 }

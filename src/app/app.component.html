@@ -1,2 +1,9 @@
-<app-dynamic-menu *ngIf="config" [menuItems]="config.menuItems" (menuItemClicked)="onMenuItemClicked($event)"></app-dynamic-menu>
-<app-table *ngIf="tableconfig" [config]="tableconfig"></app-table>
+<div class="container">
+    <div class="left-menu">
+      <app-dynamic-menu [menuItems]="config?.menuItems" (menuItemClicked)="onMenuItemClicked($event)"></app-dynamic-menu>
+    </div>
+    <div class="right-table">
+      <app-table [config]="tableConfig"></app-table>
+    </div>
+  </div>
+  

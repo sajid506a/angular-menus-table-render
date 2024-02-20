@@ -1,15 +1,16 @@
-<h1>{{config.label}}</h1>
-<table *ngIf="config">
-    <thead>
-      <tr>
-        <th  *ngFor="let item of config.headers">{{item}}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of config.tableData">
-        <ng-container *ngFor="let header of config.headers">
-          <td>{{ item[header] }}</td>
-        </ng-container>
-      </tr>
-    </tbody>
-  </table>
+<div class="table-container">
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ config?.label }}</mat-card-title>
+  </mat-card-header>
+  <mat-table *ngIf="config && config.tableData" [dataSource]="config.tableData">
+    <ng-container *ngFor="let header of config.headers" [matColumnDef]="header">
+      <mat-header-cell *matHeaderCellDef> {{ header }} </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row[header] }} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="config.headers"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: config.headers;"></mat-row>
+  </mat-table>
+</mat-card>
+</div>
