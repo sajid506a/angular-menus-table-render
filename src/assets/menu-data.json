@@ -1,0 +1,55 @@
+{
+    "menuItems": [
+      { "label": "Table 1", "dataKey": "tableData1" },
+      { "label": "Table 2", "dataKey": "tableData2" },
+      { "label": "Table 3", "dataKey": "tableData3" }
+    ],
+    "tableData1": [
+      { "id": 1, "name": "John", "age": 30 },
+      { "id": 2, "name": "Alice", "age": 25 },
+      { "id": 3, "name": "Bob", "age": 35 }
+    ],
+    "tableData2": [
+        {
+          "employee_id": 101,
+          "employee_name": "Alice Johnson",
+          "department": "Engineering",
+          "salary": 60000
+        },
+        {
+          "employee_id": 102,
+          "employee_name": "Bob Smith",
+          "department": "Marketing",
+          "salary": 55000
+        },
+        {
+          "employee_id": 103,
+          "employee_name": "Charlie Brown",
+          "department": "Sales",
+          "salary": 58000
+        }
+      ],
+    "tableData3":[
+        {
+          "id": 1,
+          "email": "john@example.com",
+          "employee_id": "EMP001",
+          "department": "Engineering",
+          "city": "New York"
+        },
+        {
+          "id": 2,
+          "email": "jane@example.com",
+          "employee_id": "EMP002",
+          "department": "Marketing",
+          "city": "Los Angeles"
+        },
+        {
+          "id": 3,
+          "email": "bob@example.com",
+          "employee_id": "EMP003",
+          "department": "Finance",
+          "city": "Chicago"
+        }
+      ]
+}
