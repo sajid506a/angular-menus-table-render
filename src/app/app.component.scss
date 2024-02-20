@@ -1,6 +1,17 @@
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.left-menu {
+  flex: 0 0 200px; /* Fixed width */
+  background-color: #f4f4f4;
+  border-right: 1px solid #ccc;
+  padding: 20px;
+}
+
+.right-table {
+  flex: 1; /* Take remaining space */
+  padding: 20px;
+}

@@ -1,5 +1,4 @@
-// app.component.ts
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import {Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -17,12 +16,18 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.http.get<any>('assets/menu-data.json').subscribe(data => {
       this.config = data;
+      const key = this.config['menuItems'][0]['dataKey'];
+      const tableData = this.config[key];
+      const headers = Object.keys(tableData[0]);
+      this.tableconfig = {label:this.config['menuItems'][0]['label'],menuItems:this.config.menuItems,tableData: tableData,headers:headers};
+      console.log(this.tableconfig);
     });
   }
 
   onMenuItemClicked(menuItem: any) {
-    let headers = Object.keys(this.config[menuItem.dataKey][0]);
-    let tableData = this.config[menuItem.dataKey];
+    const key = this.config[menuItem.dataKey][0]
+    const headers = Object.keys(key);
+    const tableData = this.config[menuItem.dataKey];
     this.tableconfig = {label:menuItem.label,menuItems:this.config.menuItems,tableData: tableData,headers:headers};
   }
 }

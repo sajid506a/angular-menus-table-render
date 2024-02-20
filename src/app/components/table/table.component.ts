@@ -13,12 +13,4 @@ export class TableComponent {
   ngOnInit() {
     console.log('ngOnInit',this.config);
   }
-
-  // ngOnChanges(config: any) {
-  //   if (config) {
-  //     const co = config.config.currentValue; 
-
-  //     this.config = {...co}; 
-  //   }
-  // }
 }
