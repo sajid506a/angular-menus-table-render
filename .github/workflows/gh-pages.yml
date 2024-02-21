@@ -22,10 +22,10 @@ jobs:
         run: npm install
 
       - name: Build
-        run: ng build --base-href "https://sajid506a.github.io/angular-menus-table-render/"
+        run: ng build --base-href "https://sajid506a.github.io/app1/"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/angular-menus-table-render
+          publish_dir: ./dist/app1
