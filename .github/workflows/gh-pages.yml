@@ -20,7 +20,7 @@ jobs:
         run: |
          npm install -g @angular/cli@latest
          npm install
-         ng build --base-href "https://sajid506a.github.io/angular-menus-table-render/"
+         ng build --base-href "https://sajid506a.github.io/angular-menus-table-render"
          ls -l ./dist/angular-menus-table-render/browser
 
       - name: Deploy
