@@ -25,10 +25,10 @@ jobs:
         run: ng build --base-href "https://sajid506a.github.io/app1/"
 
       - name: ls
-        run: cp -r ./dist/app1/browser ./dist/app1/
+        run: ls -l ./dist/app1/browser
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.PATS }}
-          publish_dir: ./dist/app1
+          publish_dir: ./dist/app1/browser
