@@ -18,11 +18,15 @@ jobs:
           node-version: '18'
       - name: Install Angular CLI
         run: npm install -g @angular/cli@latest
+      - name: angular-cli-ghpages
+        run: npm install -g angular-cli-ghpages
       - name: Install dependencies
         run: npm install
 
       - name: Build
         run: ng build --base-href "https://sajid506a.github.io/app1/"
+      - name: deploy to gh-pages
+        run: ngh --dir=dist/app1/browser
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
