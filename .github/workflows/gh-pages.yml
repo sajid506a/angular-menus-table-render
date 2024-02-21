@@ -25,7 +25,7 @@ jobs:
         run: ng build --base-href "https://sajid506a.github.io/app1/"
 
       - name: ls
-        run: ls -l ./dist/app1
+        run: cp -r ./dist/app1/browser ./dist/app1/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
