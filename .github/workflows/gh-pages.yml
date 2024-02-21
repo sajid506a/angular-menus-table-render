@@ -17,15 +17,11 @@ jobs:
         with:
           node-version: '20'
       - name: Install Angular CLI
-        run: npm install -g @angular/cli@latest
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build
-        run: ng build --base-href "https://sajid506a.github.io/angular-menus-table-render/browser"
-
-      - name: ls
-        run: ls -l ./dist/angular-menus-table-render/browser
+        run: |
+         npm install -g @angular/cli@latest
+         npm install
+         ng build --base-href "https://sajid506a.github.io/angular-menus-table-render/"
+         ls -l ./dist/angular-menus-table-render/browser
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
