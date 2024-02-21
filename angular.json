@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "app1": {
+    "angular-menus-table-render": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/app1",
+            "outputPath": "dist/angular-menus-table-render",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "app1:build:production"
+              "buildTarget": "angular-menus-table-render:build:production"
             },
             "development": {
-              "buildTarget": "app1:build:development"
+              "buildTarget": "angular-menus-table-render:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "app1:build"
+            "buildTarget": "angular-menus-table-render:build"
           }
         },
         "test": {
